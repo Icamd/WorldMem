@@ -1,0 +1,49 @@
+{
+  "profile": "perltqa_qwen",
+  "dataset": "perltqa",
+  "owner_id_format": "name_key",
+  "memory": {
+    "storage_path": "outputs/perltqa_qwen/memories",
+    "max_workers": 1
+  },
+  "llm": {
+    "model": "Qwen/Qwen3-8B",
+    "served_model": "Qwen3-8B",
+    "build_backend": "vllm",
+    "retrieval_backend": "vllm",
+    "base_url": "http://127.0.0.1:8000/v1",
+    "reasoning_effort": "minimal",
+    "min_completion_tokens": 4096
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "backend": "local",
+    "device": "cpu"
+  },
+  "construction": {
+    "batch_size": 40,
+    "atomic_backfill": true,
+    "annotate_agent_labels": true
+  },
+  "retrieval": {
+    "mental_top_k_labels": 50,
+    "mental_top_k_keywords": 15,
+    "mental_extra_label_top_k": 20,
+    "mental_extra_keywords_per_label": 10,
+    "situation_character_extra_top_k": 3,
+    "situation_model_top_k_per_bin": 10,
+    "situation_model_top_k_total": 40,
+    "situation_semantic_budget": 120,
+    "force_situation_semantic_budget": true,
+    "always_supplement_global_semantics": true,
+    "global_semantic_supplement_top_k": 120,
+    "min_situation_semantics_preserved": 30,
+    "final_source_info_top_k": 3,
+    "direct_semantic_top_k": 3,
+    "guardrail_message_top_k": 3,
+    "include_original_messages_top_k": 10,
+    "final_evidence_scope": "all",
+    "restrict_candidates_by_query_characters": false,
+    "situation_model_require_label_overlap": false
+  }
+}

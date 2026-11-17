@@ -1,0 +1,9 @@
+WorldMem anonymous research code
+
+Portions of this implementation are derived from xMemory and the subsequent
+WorldMem research implementation. The upstream MIT copyright and permission
+notice is retained verbatim in LICENSE. It identifies third-party code ownership;
+no submission-author identity or affiliation has been added.
+
+The release contains synthetic examples only. LoCoMo and PerLTQA datasets and
+model weights are obtained separately from their respective upstream projects.

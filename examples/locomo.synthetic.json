@@ -1,0 +1,28 @@
+[
+  {
+    "conversation": {
+      "speaker_a": "Alice",
+      "speaker_b": "Bob",
+      "session_1_date_time": "1:56 pm on 8 May, 2023",
+      "session_1": [
+        {
+          "speaker": "Alice",
+          "text": "I visited the museum in Paris yesterday.",
+          "dia_id": "D1:1"
+        },
+        {
+          "speaker": "Bob",
+          "text": "You visited the museum in Paris on May 7.",
+          "dia_id": "D1:2"
+        }
+      ]
+    },
+    "qa": [
+      {
+        "question": "Which city did Alice visit the museum in?",
+        "answer": "Paris",
+        "category": 4
+      }
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "Alice": {
+    "profile": {
+      "Protagonist": "Alice",
+      "Occupation": "Astronomer"
+    },
+    "profile_description": "Alice is an astronomer. Alice enjoys museums.",
+    "social_relationship": {
+      "r1": {
+        "Supporting Characters": "Bob",
+        "Relationship": "friend",
+        "Description": "Alice's friend Bob"
+      }
+    },
+    "events": {
+      "e1": {
+        "summary": "Museum visit",
+        "content": "Alice visited the museum in Paris on 7 May 2023.",
+        "Creation Time": "2023-05-07"
+      }
+    },
+    "dialogues": {
+      "d1": {
+        "events": "e1",
+        "contents": {
+          "2023-05-08T13:56:00": [
+            "Alice: I visited the museum in Paris yesterday.",
+            "Bob: You visited the museum in Paris on May 7."
+          ]
+        }
+      }
+    }
+  }
+}

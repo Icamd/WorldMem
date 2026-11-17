@@ -1,0 +1,58 @@
+{
+  "profile": "perltqa_api",
+  "dataset": "perltqa",
+  "owner_id_format": "name_key",
+  "memory": {
+    "storage_path": "outputs/perltqa_api/memories",
+    "max_workers": 1
+  },
+  "llm": {
+    "model": "gpt-5-nano",
+    "served_model": "gpt-5-nano",
+    "build_backend": "openai_api",
+    "retrieval_backend": "openai_api",
+    "base_url": "https://api.openai.com/v1",
+    "reasoning_effort": "minimal",
+    "min_completion_tokens": 32768
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "backend": "local",
+    "device": "cpu"
+  },
+  "construction": {
+    "batch_size": 40,
+    "atomic_backfill": true,
+    "annotate_agent_labels": true
+  },
+  "retrieval": {
+    "mental_top_k_labels": 50,
+    "mental_top_k_keywords": 15,
+    "mental_extra_label_top_k": 20,
+    "mental_extra_keywords_per_label": 10,
+    "situation_character_extra_top_k": 3,
+    "situation_model_top_k_per_bin": 10,
+    "situation_model_top_k_total": 40,
+    "situation_semantic_budget": 120,
+    "force_situation_semantic_budget": true,
+    "always_supplement_global_semantics": true,
+    "global_semantic_supplement_top_k": 120,
+    "min_situation_semantics_preserved": 30,
+    "final_source_info_top_k": 3,
+    "situation_min_selected_semantics": 10,
+    "character_keyword_situation_max_semantics": 4,
+    "direct_semantic_top_k": 3,
+    "guardrail_message_top_k": 3,
+    "include_original_messages_top_k": 10,
+    "final_evidence_scope": "all",
+    "restrict_candidates_by_query_characters": false,
+    "situation_model_require_label_overlap": false,
+    "openai_api_stage_max_tokens": 32768,
+    "stage_reasoning_effort": {
+      "mental_query_analysis": "minimal",
+      "mental_keyword_selection": "minimal",
+      "situation_decision": "minimal",
+      "situation_final_answer": "high"
+    }
+  }
+}
